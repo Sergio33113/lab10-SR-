@@ -27,9 +27,10 @@ def power(x, y):
     return x ** y
 
 def logarithm(x, base=math.e):
-    if x <= 0:
-        raise ValueError("Logarithm undefined for non-positive values.")
+    if x <= 0 or base <= 0 or base == 1:
+        raise ValueError("Invalid input for logarithm.")
     return math.log(x, base)
+
 
 def exp(x):
     return math.exp(x)
