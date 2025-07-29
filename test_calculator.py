@@ -1,6 +1,6 @@
 # https://github.com/Sergio33113/lab10-SR-
 # Partner 1: Sergio Rivera
-
+# Partner 2: Sergio Rivera
 
 import unittest
 import calculator
