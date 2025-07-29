@@ -1,6 +1,8 @@
 # https://github.com/Sergio33113/lab10-SR-
 # Partner 1: Sergio Rivera
-# Partner 2: 
+
+
+import math
 
 def add(x, y):
     return x + y
@@ -8,18 +10,35 @@ def add(x, y):
 def subtract(x, y):
     return x - y
 
-def multiply(x, y):
+def mul(x, y):  # required name
     return x * y
 
-def divide(x, y):
+def div(x, y):  # required name
     if y == 0:
         raise ValueError("Cannot divide by zero.")
     return x / y
-
-def power(x, y):
-    return x ** y
 
 def mod(x, y):
     if y == 0:
         raise ValueError("Cannot mod by zero.")
     return x % y
+
+def power(x, y):
+    return x ** y
+
+def logarithm(x, base=math.e):
+    if x <= 0:
+        raise ValueError("Logarithm undefined for non-positive values.")
+    return math.log(x, base)
+
+def exp(x):
+    return math.exp(x)
+
+def square_root(x):
+    if x < 0:
+        raise ValueError("Cannot take square root of negative number.")
+    return math.sqrt(x)
+
+def hypotenuse(a, b):
+    return math.hypot(a, b)
+
