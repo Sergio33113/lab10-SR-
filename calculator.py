@@ -15,7 +15,7 @@ def mul(x, y):
 
 def div(x, y):  
     if y == 0:
-        raise ValueError("Cannot divide by zero.")
+        raise ZeroDivisionError("Cannot divide by zero.")
     return x / y
 
 def mod(x, y):
