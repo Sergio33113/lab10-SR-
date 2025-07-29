@@ -1,49 +1,44 @@
 # https://github.com/Sergio33113/lab10-SR-
 # Partner 1: Sergio Rivera
 
-
 import math
 
-def add(x, y):
-    return x + y
-
-def subtract(x, y):
-    return x - y
-
-def mul(x, y):  # required name
-    return x * y
-
-def div(x, y):  # required name
-    if y == 0:
-        raise ValueError("Cannot divide by zero.")
-    return x / y
-
-def mod(x, y):
-    if y == 0:
-        raise ValueError("Cannot mod by zero.")
-    return x % y
-
-def power(x, y):
-    return x ** y
-
-def logarithm(x, base=math.e):
-    if x <= 0:
-        raise ValueError("Logarithm undefined for non-positive values.")
-    return math.log(x, base)
-
-def exp(x):
-    return math.exp(x)
-
-def square_root(x):
-    if x < 0:
+def square_root(a):
+    if a < 0:
         raise ValueError("Cannot take square root of negative number.")
-    return math.sqrt(x)
+    return math.sqrt(a)
 
 def hypotenuse(a, b):
     return math.hypot(a, b)
 
+def add(a, b):
+    return a + b
+
+def sub(a, b):
+    return a - b
+
+def mul(a, b):
+    return a * b
+
+def div(a, b):
+    if b == 0:
+        raise ZeroDivisionError("Cannot divide by zero.")
+    return a / b
+
+def log(a, b):
+    if a <= 0 or b <= 0 or b == 1:
+        raise ValueError("Invalid input for logarithm.")
+    return math.log(a, b)
+
+def exp(a, b):
+    return a ** b
+
 def run_unit_tests():
     import unittest
-    unittest.main(module='test_calculator', exit=False)
+    from test_calculator import TestCalculator
 
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestCalculator)
+    result = unittest.TextTestRunner().run(suite)
+    return result.wasSuccessful()
 
+run_unit_tests()
