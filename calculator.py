@@ -42,3 +42,8 @@ def square_root(x):
 def hypotenuse(a, b):
     return math.hypot(a, b)
 
+def run_unit_tests():
+    import unittest
+    unittest.main(module='test_calculator', exit=False)
+
+
